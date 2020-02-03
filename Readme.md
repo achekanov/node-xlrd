@@ -82,6 +82,8 @@ open a workbook.
 			* The caller may save memory by calling workbook.sheet.unload() when finished with the sheet. This applies irrespective of the state of onDemand.  
 			* workbook.sheet.loaded() checks whether a sheet is loaded or not.  
 			* workbook.cleanUp() should be called at end of node-xlrd.open() callback.  
+		* streamRead : function(obj)
+			allows reading the file without storing it in memory, sending each row to provided callback function as soon as it was read
 	* callback : function(err, workbook)
     
 ###	node-xlrd.common
